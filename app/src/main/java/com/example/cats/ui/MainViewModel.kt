@@ -1,6 +1,5 @@
 package com.example.cats.ui
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.map
@@ -17,7 +16,6 @@ class MainViewModel(
 ) : ViewModel() {
 
     fun fetchCatGoImagesLiveData(): LiveData<PagingData<String>> {
-        Log.d("cachedIn","fuck fuck fuck")
         return repository.letCatGoImagesLiveData()
             .map { it.map { it.url!! } }
             .cachedIn(viewModelScope)

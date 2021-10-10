@@ -27,11 +27,6 @@ class MainFragment : Fragment() {
     @ExperimentalPagingApi
     private lateinit var mainViewModel:MainViewModel
 
-
-
-
-
-
     @ExperimentalPagingApi
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,10 +37,7 @@ class MainFragment : Fragment() {
         initMembers()
         setUpViews(view)
         fetchCatGoImagesLiveData()
-         setBackGroundAnimation(mBinding.mainLayout.background as AnimationDrawable)
-
-
-
+        setBackGroundAnimation(mBinding.mainLayout.background as AnimationDrawable)
         return mBinding.root
     }
 

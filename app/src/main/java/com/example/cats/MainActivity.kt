@@ -10,7 +10,6 @@ import com.example.cats.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
     private val mBinding get() = _binding!!
-    lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
